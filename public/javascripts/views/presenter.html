@@ -1,0 +1,20 @@
+<div ng-animate ng-repeat="msg in messages" class="row repeated-message-item">
+    <div class="col-md-12">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="col-md-3 col-sm-4 text-center">
+                    <div class="label label-default">{{msg.type}}</div>
+                    <div class="label label-info">{{msg.created | date : 'dd MMM yy : HH:mm:ss'}}</div>
+                    <br>
+                    <div class="label label-danger" ng-pluralize count="(msg.showMilliseconds | millSecondsToSeconds)" when="{'1' : '1 second to hide', 'other' : '{} seconds to hide'}"></div>
+
+                </div>
+                <div class="col-md-9 col-sm-8">
+                    <img ng-if="msg.type === 'image'" data-ng-src="data:image/jpg;base64,{{msg.message}}" class="message-item-image"/>
+                    <div ng-if="msg.type === 'text'">{{msg.message}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-hide="messages.length" class="text-danger">No messages</div>

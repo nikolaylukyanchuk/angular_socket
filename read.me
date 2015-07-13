@@ -1,0 +1,43 @@
+Test angular javascript developer test
+
+Desciption:
+In this test work I tried to show my technology stack:
+I used websocket (socket.io) instead of ajax calls. 
+I wrote angularjs custom directives, filters, service, controller, used predefined directives (animate, pluralize) and shown how to work with emit/on events
+
+Consumer - service - see /public/javascripts/services (consumerService)
+   get new messages from server, send this messages to presenter
+Presenter - custom directive - see /public/javascripts/directives (presenter)
+   get new messages from Consumer and display them on html, user can manage showing time by changing lifetime directive parameter
+
+One more point, the reason I dont like to use code comments, because code should be clear and understandable without any additional text information.
+
+Get Project Dependencies:
+npm install
+
+Start application: 
+node ./bin/www
+
+Browser
+http://localhost:3000
+
+Technology Stack:
+
+nodejs
+ express.js
+ modules
+ repository pattern
+ callback
+ socket.io
+ ejs
+
+angularjs
+ controller
+ directives (custom directives)
+ filters (custom filters)
+ services,
+ subscribe/unsubscribe events
+ socket.io
+ animate
+
+npm, html, css, twitter bootstrap, moment.js

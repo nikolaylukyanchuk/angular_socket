@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/javascripts/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/javascripts/lib/bootstrap/css/bootstrap-theme.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="/javascripts/lib/moment.min.js"></script>
+    <script src="/javascripts/lib/angular/angular.min.js"></script>
+    <script src="/javascripts/lib/angular/angular-animate.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <script src="/javascripts/controllers.js"></script>
+    <script src="/javascripts/services.js"></script>
+    <script src="/javascripts/directives.js"></script>
+    <script src="/javascripts/filters.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body ng-controller="AppController">
+<div class="container" ng-controller="AppMessageController">
+    <h1><%= title %></h1>
+    <presenter lifetime="5000"></presenter>
+</div>
+</body>
+</html>
